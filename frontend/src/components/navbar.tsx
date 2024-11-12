@@ -30,8 +30,12 @@ export default function Navbar() {
         </div>
 
         <div className="hidden space-x-4 md:flex">
-          <Button variant="outline">Request Information</Button>
-          <Button>Consult with Us</Button>
+          <Link to="/contact">
+            <Button variant="outline">Request Information</Button>
+          </Link>
+          <Link to="/g-touch">
+            <Button>Consult with Us</Button>
+          </Link>
         </div>
 
         {/* Mobile Menu Button */}
@@ -72,10 +76,14 @@ export default function Navbar() {
               </Link>
             </div>
             <div className="flex flex-col space-y-2">
-              <Button variant="outline" className="w-full">
-                Request Information
-              </Button>
-              <Button className="w-full">Consult with Us</Button>
+              <Link to="/contact">
+                <Button variant="outline" className="w-full">
+                  Request Information
+                </Button>
+              </Link>
+              <Link to="/g-touch">
+                <Button className="w-full">Consult with Us</Button>
+              </Link>
             </div>
           </div>
         </div>
