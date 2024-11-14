@@ -1,5 +1,4 @@
 import {
-  TypographyH2,
   TypographyH3,
   TypographyP,
   TypographySmall,
@@ -12,15 +11,13 @@ import useWindowSize from "@/hooks/useWindowSize";
 import ServiceImg from "@/assets/image4.png";
 import ServiceImgSimple1 from "@/assets/image2.png";
 import ServiceImgSimple2 from "@/assets/image3.png";
+import HeadingSection from "@/components/common/HeadingSection";
 
 export default function ServiceIntroduction() {
   const { width } = useWindowSize();
   return (
     <div className="lg:px-14">
-      <TypographySmall>Service</TypographySmall>
-      <TypographyH2 classStyle="uppercase">
-        ReadyFor FunDraising Service
-      </TypographyH2>
+      <HeadingSection sectionName="Service" des="Dịch vụ gây quỹ READYFOR" />
       <TypographyP>
         "READYFOR Fundraising Service" is a service in which fundraisers with
         extensive practical experience provide tailored, optimal fundraising

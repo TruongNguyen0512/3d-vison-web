@@ -12,22 +12,25 @@ export default function News() {
           <Btn>Danh sách tin tức</Btn>
         </div>
         <ul className="xl:py-24">
-          <li className="border-solid border-[#dedede] border-b-[1px] mb-10">
+          <li className="mb-10">
             <NewsCard
               content="Dự án gây quỹ cộng đồng “Bảo vệ kho báu của Trái đất” đã giành Giải Đồng ở hạng mục PR tại Bảo tàng Khoa học và Tự nhiên Quốc gia x READYFOR ACC TOKYO GIẢI THƯỞNG SÁNG TẠO"
               publish="2024/10/31"
+              path="/"
             />
           </li>
-          <li className="border-solid border-[#dedede] border-b-[1px] mb-10">
+          <li className="mb-10">
             <NewsCard
               content="Dự án gây quỹ cộng đồng “Bảo vệ kho báu của Trái đất” đã giành Giải Đồng ở hạng mục PR tại Bảo tàng Khoa học và Tự nhiên Quốc gia x READYFOR ACC TOKYO GIẢI THƯỞNG SÁNG TẠO"
               publish="2024/10/31"
+              path="/"
             />
           </li>
-          <li className="border-solid border-[#dedede] border-b-[1px] mb-10">
+          <li className="mb-10">
             <NewsCard
               content="Dự án gây quỹ cộng đồng “Bảo vệ kho báu của Trái đất” đã giành Giải Đồng ở hạng mục PR tại Bảo tàng Khoa học và Tự nhiên Quốc gia x READYFOR ACC TOKYO GIẢI THƯỞNG SÁNG TẠO"
               publish="2024/10/31"
+              path="/"
             />
           </li>
         </ul>

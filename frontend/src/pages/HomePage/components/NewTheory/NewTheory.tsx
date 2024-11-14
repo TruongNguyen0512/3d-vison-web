@@ -1,12 +1,11 @@
 import ArticleCard from "@/components/ArticleCard";
-import { TypographyH2, TypographySmall } from "@/components/common/Typography";
 import ArticleThumnail from "@/assets/article_thumnail.png";
+import HeadingSection from "@/components/common/HeadingSection";
 
 export default function NewTheory() {
   return (
     <div className="lg:px-14">
-      <TypographySmall>New Theory</TypographySmall>
-      <TypographyH2>Lý thuyết gây quỹ</TypographyH2>
+      <HeadingSection sectionName="New Theory" des="Lý thuyết gây quỹ" />
       <ul className="grid grid-cols-1 gap-4 lg:grid-cols-3 py-10">
         <li>
           <ArticleCard
