@@ -1,16 +1,14 @@
-import {
-  TypographyH2,
-  TypographyLarge,
-  TypographyP,
-  TypographySmall,
-} from "@/components/common/Typography";
+import HeadingSection from "@/components/common/HeadingSection";
+import { TypographyLarge, TypographyP } from "@/components/common/Typography";
 import { Check } from "lucide-react";
 
 export default function Problems() {
   return (
     <div className="lg:px-14">
-      <TypographySmall>Problem</TypographySmall>
-      <TypographyH2>Bạn có bất kỳ vấn đề nào trong số này không?</TypographyH2>
+      <HeadingSection
+        sectionName="Problem"
+        des="Bạn có bất kỳ vấn đề nào trong số này không?"
+      />
       <div className="lg:ml-10 my-10">
         <div className="bg-black rounded px-3 py-2 h-auto w-max my-4">
           <TypographyLarge classStyle="text-white">
