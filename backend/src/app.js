@@ -11,6 +11,12 @@ app.use(compression())
 
 //routes
 
+// Add this line after your existing middleware
+const contactRouter = require('./routes/contact.routes');
+s
+// Add this line before error handling middleware
+app.use('/api/v1', contactRouter);
+
 //init db
 require("./dbs/init.mongodb");
 
