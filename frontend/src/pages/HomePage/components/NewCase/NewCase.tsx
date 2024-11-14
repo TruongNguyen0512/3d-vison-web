@@ -1,13 +1,13 @@
 import ArticleCard from "@/components/ArticleCard";
-import { TypographyH2, TypographySmall } from "@/components/common/Typography";
+import { TypographySmall } from "@/components/common/Typography";
 import ArticleThumnail from "@/assets/article_thumnail.png";
 import Btn from "@/components/common/Btn";
+import HeadingSection from "@/components/common/HeadingSection";
 
 export default function NewCase() {
   return (
     <div className="lg:px-14">
-      <TypographySmall>New Cases</TypographySmall>
-      <TypographyH2>Nghiên cứu điển hình</TypographyH2>
+      <HeadingSection sectionName="New Cases" des="Nghiên cứu điển hình" />
       <ul className="grid grid-cols-1 gap-4 lg:grid-cols-3 py-10">
         <li>
           <ArticleCard
