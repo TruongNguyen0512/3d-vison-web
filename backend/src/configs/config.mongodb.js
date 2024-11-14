@@ -13,9 +13,10 @@ const pro = {
         port :process.env.PRO_APP_PORT 
     },
     db: {
-        host: process.env.PRO_DB_HOST ,
-        port: process.env.PRO_DB_PORT ,
-        name: process.env.PRO_DB_NAME  
+        host: process.env.PRO_DB_HOST,
+        name: process.env.PRO_DB_NAME,
+        username: process.env.PRO_DB_USERNAME,
+        password: process.env.PRO_DB_PASSWORD
     }
 }
 
@@ -26,5 +27,5 @@ const cfg = config[env]
 module.exports = {
     config : cfg,
     env,
-    dbType : env === 'dev' ? 'mongodb+srv' : 'mongodb'   
+    dbType : env === 'dev' ? 'mongodb' : 'mongodb+srv'   
 }

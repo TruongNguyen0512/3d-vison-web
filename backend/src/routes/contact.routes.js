@@ -1,11 +1,15 @@
 const express = require('express');
 const router = express.Router();
-const contactController = require('../controllers/contact.controller');
+const AuthController = require('../controllers/auth.controller');
+const { verifyEmail } = require('../middlewares/verify.middleware');
+const { authLimiter } = require('../middlewares/rateLimit.middlewre');
 
-// Create new contact
-router.post('/contacts', contactController.createContact);
+const authController = new AuthController();
 
-// Get all contacts
-router.get('/contacts', contactController.getContacts);
+// Auth routes
+router.post('/register', authLimiter, authController.register.bind(authController));
+router.post('/login', authLimiter, verifyEmail, authController.login.bind(authController));
+router.get('/verify-email/:token', authController.verifyEmail.bind(authController));
 
-module.exports = router;
+module.exports = router;  
+
