@@ -20,6 +20,10 @@ app.use(apiLimiter);
 // Add this line before error handling middleware
 app.use('/api/v1', contactRouter);
 
+app.get('/health', (req, res) => {
+    res.status(200).json({ status: 'ok' });
+  });
+
 //init db
 require("./dbs/init.mongodb");
 

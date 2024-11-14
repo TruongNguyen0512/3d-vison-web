@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: 3d-vision-api
+    env: node
+    rootDir: backend
+    buildCommand: yarn install
+    startCommand: yarn start
+    envVars:
+      - key: NODE_ENV
+        value: pro
