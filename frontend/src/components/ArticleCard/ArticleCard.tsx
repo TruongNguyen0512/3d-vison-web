@@ -17,7 +17,7 @@ export default function ArticleCard({
 }: TArticle) {
   return (
     <NavLink to={`article/${id}`} className="cursor-pointer bg-transparent">
-      <Card className="overflow-hidden hover:-translate-y-2 transition-all duration-500 border-none">
+      <Card className="overflow-hidden hover:-translate-y-2 transition-all duration-500 border-none bg-transparent">
         <img
           src={thumnail}
           alt="article-thumnail"
