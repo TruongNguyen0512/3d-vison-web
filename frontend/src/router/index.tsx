@@ -1,6 +1,7 @@
 import AuthPage from "@/pages/AuthPage";
 import LoginPage from "@/pages/AuthPage/LoginPage";
 import RegisterPage from "@/pages/AuthPage/RegisterPage";
+import CasePage from "@/pages/CasePage";
 import HomePage from "@/pages/HomePage";
 import MemberPage from "@/pages/MemberPage";
 import NewsPage from "@/pages/NewsPage";
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
   {
     path: "/members",
     element: <MemberPage />,
+  },
+  {
+    path: "/article",
+    element: <CasePage />,
   },
 ]);
 
