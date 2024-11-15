@@ -2,6 +2,7 @@ import AuthPage from "@/pages/AuthPage";
 import LoginPage from "@/pages/AuthPage/LoginPage";
 import RegisterPage from "@/pages/AuthPage/RegisterPage";
 import HomePage from "@/pages/HomePage";
+import MemberPage from "@/pages/MemberPage";
 import NewsPage from "@/pages/NewsPage";
 import { createBrowserRouter } from "react-router-dom";
 
@@ -27,6 +28,10 @@ const router = createBrowserRouter([
   {
     path: "/news",
     element: <NewsPage />,
+  },
+  {
+    path: "/members",
+    element: <MemberPage />,
   },
 ]);
 
