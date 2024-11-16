@@ -54,11 +54,15 @@ export default function RegisterPage() {
       const res = await apiInstance.post("/register", data);
       if (res.data.success) {
         localStorage.setItem("token", res.data.token);
-      } else {
-        navigate("/auth/register");
+        navigate("/auth/login");
       }
-    } catch (error) {
-      console.error("ERROR:", error);
+    } catch (error: any) {
+      console.error("Registration error:", error);
+      if (error.code === "ECONNABORTED") {
+        alert("Registration request timed out. Please try again.");
+      } else {
+        alert(error.response?.data?.message || "Registration failed. Please try again.");
+      }
     }
   };
 

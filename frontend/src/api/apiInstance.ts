@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const apiInstance = axios.create({
-  baseURL: import.meta.env.VITE_API_URL,
-  timeout: 10000,
+  baseURL: "https://threed-vison-api.onrender.com/api/v1",
+  timeout: 30000,
   headers: {
     "Content-Type": "application/json", // Đặt header mặc định
   },
