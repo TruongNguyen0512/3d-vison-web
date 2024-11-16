@@ -3,12 +3,23 @@ const express = require("express");
 const { default: helmet } = require("helmet");
 const cors = require("cors");
 const app = express();
+// Add this line to trust proxy
+app.set('trust proxy', 1);
+
 //middleware
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(helmet());  
 app.use(compression())
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3157',  // Local frontend
+    'https://threedvison.onrender.com' // Production frontend
+  ],
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
 
 
 //routes
